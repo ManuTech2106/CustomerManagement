@@ -30,7 +30,7 @@ namespace CustomerManagement.API.Controllers
 
             if (result == null)
             {
-                var customResponse = new { message = $"Customers are not available." };
+                var customResponse = new { message = "Customers are not available." };
                 return NotFound(customResponse);
             }
 

@@ -26,7 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CustomerManagement.API\CustomerManagement.API.csproj" />
+    <ProjectReference Include="..\CustomerManagement.API\CustomerManagement.Api.csproj" />
     <ProjectReference Include="..\CustomerManagement.Core\CustomerManagement.Core.csproj" />
     <ProjectReference Include="..\CustomerManagement.Infra\CustomerManagement.Infra.csproj" />
     <ProjectReference Include="..\CustomerManagement.Service\CustomerManagement.Service.csproj" />

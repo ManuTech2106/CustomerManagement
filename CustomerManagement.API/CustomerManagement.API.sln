@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.API", "CustomerManagement.API.csproj", "{387424AF-89E6-4ACE-B05A-452EB628118F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Api", "CustomerManagement.Api.csproj", "{387424AF-89E6-4ACE-B05A-452EB628118F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Core", "..\CustomerManagement.Core\CustomerManagement.Core.csproj", "{13911CEE-36CE-4325-AB1B-AFE44968F354}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Infra", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Service", "..\CustomerManagement.Service\CustomerManagement.Service.csproj", "{299BD8FD-B513-4B72-B1F0-6684B44F2BC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerManagement.Test", "..\CustomerManagement.Test\CustomerManagement.Test.csproj", "{5A3FE627-AE65-4329-ADEA-75C02676C6BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomerManagement.Test", "..\CustomerManagement.Test\CustomerManagement.Test.csproj", "{5A3FE627-AE65-4329-ADEA-75C02676C6BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CustomerService } from '../../../services/customer.service';
 import { CommonModule } from '@angular/common';
 import { AsyncPipe } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import { Customer } from '../../../models/customer.model';
 import { MatButton } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { RouterLink, Router} from '@angular/router';
+import { AgePipe } from '../../../Pipes/age.pipe';
+
 
 @Component({
-  selector: 'app-customers-list',
-  standalone: true,
-  imports: [CommonModule, AsyncPipe, MatTableModule, MatButton, RouterLink],
-  templateUrl: './customers-list.component.html',
-  styleUrl: './customers-list.component.css'
+    selector: 'app-customers-list',
+    standalone: true,
+    templateUrl: './customers-list.component.html',
+    styleUrl: './customers-list.component.css',
+    imports: [CommonModule, AsyncPipe, MatTableModule, MatButton, RouterLink, AgePipe]
 })
 
 export class CustomersListComponent {
@@ -21,10 +23,12 @@ export class CustomersListComponent {
   constructor(private customerService: CustomerService) {
 
   }
+
+  router = inject(Router);
    
   customerData$ = this.customerService.getAllCutomers();
 
-  displayedColumns: string[] = ['Customer Id', 'Full Name', 'Date Of Birth'];
+  displayedColumns: string[] = ['Customer Id', 'Full Name', 'Date Of Birth', 'Age', 'Action'];
   dataSource = this.customers;
 
   ngOnInit() {
@@ -40,4 +44,9 @@ export class CustomersListComponent {
 
     });
   }
+
+  editCustomer(customerId:string) {
+      this.router.navigateByUrl("/customer/" + customerId);
+  }  
+
 }

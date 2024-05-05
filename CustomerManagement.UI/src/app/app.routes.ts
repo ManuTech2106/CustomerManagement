@@ -3,18 +3,20 @@ import { CustomersListComponent } from './Components/Customers/customers-list/cu
 import { CustomerAddComponent } from './Components/Customers/customer-add/customer-add.component';
 
 export const routes: Routes = [
-{
-    path:'',
-    component: CustomersListComponent
-}, 
-{
-    path:'customer',
-    component: CustomersListComponent
-},
-{
-    path:'add-customer',
-    component: CustomerAddComponent
-}
-
-    
+    {
+        path: '',
+        component: CustomersListComponent
+    },
+    {
+        path: 'customer',
+        component: CustomersListComponent
+    },
+    {
+        path: 'add-customer',
+        component: CustomerAddComponent
+    },
+    {
+        path: 'customer/:customerId',
+        component: CustomerAddComponent
+    }
 ];

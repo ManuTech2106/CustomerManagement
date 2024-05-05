@@ -22,4 +22,13 @@ export class CustomerService {
   public createCustomer(customer:Customer) {
       return this.http.post(this.baseUrl + "/api/Customers", customer);
   }
+
+  public getCustomer(customerId: string): Observable<Customer> {
+    return this.http.get<Customer>(this.baseUrl + '/api/Customers/' + customerId );
+  }
+
+  public updateCustomer(customerId: string, customer:object) {
+    return this.http.patch(this.baseUrl + "/api/Customers/" + customerId, customer);
+}
+
 }

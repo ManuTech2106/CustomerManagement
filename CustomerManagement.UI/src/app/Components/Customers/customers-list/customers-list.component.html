@@ -1,4 +1,51 @@
-<div class="container" my-5>
+
+<!-- @if (customerData$ | async; as customerData) {
+
+    @if(customerData.length>0){
+        @for (item of customerData; track $index) {
+                <p>{{item.customerId}}</p>
+
+        }
+
+    } @else {
+
+        <p>No Customers Found...</p>
+    }
+
+} -->
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="Customer Id">
+      <th mat-header-cell *matHeaderCellDef> Customer Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.customerId}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Full Name">
+      <th mat-header-cell *matHeaderCellDef> Full Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Date Of Birth">
+      <th mat-header-cell *matHeaderCellDef> Date of Birth </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateOfBirth}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+
+
+<!-- <div class="container" my-5>
     <h1 class="mb-3">Customers</h1>
     <table class="table" *ngIf="customers">
         <thead>
@@ -17,4 +64,4 @@
         </tbody>
     </table>
     <p *ngIf="!customers">No Customers Found!</p>
-</div>
+</div> -->

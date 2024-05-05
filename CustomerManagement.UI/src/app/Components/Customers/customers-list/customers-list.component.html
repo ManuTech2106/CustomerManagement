@@ -1,0 +1,20 @@
+<div class="container" my-5>
+    <h1 class="mb-3">Customers</h1>
+    <table class="table" *ngIf="customers">
+        <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>Full Name</th>
+                <th>Date of Birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let customer of customers">
+                <td>{{customer.customerId}}</td>
+                <td>{{customer.fullName}}</td>
+                <td>{{customer.dateOfBirth}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!customers">No Customers Found!</p>
+</div>

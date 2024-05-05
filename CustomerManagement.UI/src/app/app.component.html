@@ -13,10 +13,13 @@
   </div>
 </nav> -->
 <mat-toolbar color="primary">
-  <button mat-icon-button class="mr-2">
+  <button mat-icon-button class="mr-2" routerLink="/">
     <mat-icon>home</mat-icon>
   </button>
   <span> Customer Management</span>
   <span class="example-spacer"></span>
 </mat-toolbar>
-<router-outlet></router-outlet>
+
+<div class="w-full px-36 py-8">
+  <router-outlet></router-outlet>
+</div>

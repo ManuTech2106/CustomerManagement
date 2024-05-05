@@ -1,0 +1,22 @@
+<div class ="mat-elevation-z8 w-full">
+    <div class="shadow p-6">
+        <h4>Create Customer</h4>
+        <form [formGroup]="customerForm"  (ngSubmit)="Save()">
+            <div class="w-full flex flex-wrap">
+                <mat-form-field class="w-full">
+                    <mat-label>Full Name</mat-label>
+                    <input type="text" matInput placeholder="Please Enter your complete name..." formControlName="fullName">
+                </mat-form-field>
+            </div>
+            <div class="w-full flex flex-wrap">
+                <mat-form-field class="w-full">
+                    <mat-label>Date of Birth</mat-label>
+                    <input type="date" matInput placeholder="Please Enter your DOB..." formControlName="dateOfBirth">
+                </mat-form-field>
+            </div>
+            <div class="flex justify-center">
+                <button mat-raised-button color="primary" [disabled]="!customerForm.valid">Save</button>
+            </div>
+        </form>
+    </div>
+</div>

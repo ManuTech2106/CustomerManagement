@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AsyncPipe } from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
 import { Customer } from '../../../models/customer.model';
+import { MatButton } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-customers-list',
   standalone: true,
-  imports: [CommonModule, AsyncPipe, MatTableModule],
+  imports: [CommonModule, AsyncPipe, MatTableModule, MatButton, RouterLink],
   templateUrl: './customers-list.component.html',
   styleUrl: './customers-list.component.css'
 })
